@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>No Limits Pizza</title>
+    <link href="pizza.css" type="text/css" rel="stylesheet">
+    <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+</head>
+<body>
+    
+<header>
+  <div class="headerWrapper">    
+    <h1 class="company">No Limits Pizza</h1>
+    <h3 class="slogan">"You want extra, extra, extra cheese? No problem."</h3> 
+  </div>
+  <div class="navContainer">
+    <div class="navbar">
+      <a href="#">Home</a>
+      <a href="#">Menu</a>
+      <div class="dropdown">
+        <button class="dropbutton" onclick="myFunction()">Locations
+          <i class="fa fa-caret-down"></i>
+        </button>  
+        <div class="dropdown-content" id="myDropdown">
+          <a href="#">North Side</a>
+          <a href="#">South Side</a>
+          <a href="#">East Side</a>
+          <a href="#">West Side</a>
+        </div>
+      </div>
+    </div>  
+  </div>
+</header>  
+
+<section>
+  <form>  
+  <h2 class="order-title">Create Your Own Pizza</h2>
+  <p class="order-title-p">Please select the below items to create your pizza. Remember, no judgement. <strong>No limits.</strong></p>
+  <div class="first-three-container">
+    <div class="box">
+      <p>Choose Your Crust</p>
+      <label for="thin">Thin Crust</label>
+      <input id="thin" name="crust" type="radio" value="thin">
+      <br>
+      <label for="regular">Regular Crust</label>
+      <input id="regular" name="crust" type="radio" value="regular">
+      <br>
+      <label for="stuffed-crust">Stuffed-crust</label>
+      <input id="stuffed-crust" name="crust" type="radio" value="stuffed-crust">  
+    </div>
+    <div class="box">
+      <p>Choose Your Sauce</p>
+      <label for="red">Original Marinara</label>
+      <input id="red" name="sauce" type="radio" value="red">
+      <br>
+      <label for="alfredo">Creamy Alfredo</label>
+      <input id="alfredo" name="sauce" type="radio" value="alfredo">
+      <br>
+      <label for="spicy">Spicy Habanero</label>
+      <input id="spicy" name="sauce" type="radio" value="spicy"> 
+    </div>
+    <div class="box">
+      <p>Here's Your Chance: How Much Cheese?</p>
+      <select id="cheese" name="cheese">
+        <option value="regular">Regular</option>
+        <option value="xtracheese">Xtra Cheese (add $1)</option>
+        <option value="2xcheese">2X Cheese (add $1.50)</option>
+        <option value="3xcheese">3X Cheese (add $2)</option>
+        <option value="4xcheese">4X Cheese (add $2.50)</option>
+        <option value="5xcheese">5X Cheese (add $3)</option>
+        <option value="6xcheese">6X Cheese (add $3.50)</option>
+        <option value="3xcheese">NEED MORE CHEESE (fill out needs below)</option>
+      </select>
+    </div>
+  </div>
+  <div class="second-three-container">
+    <div class="box">
+      <label for="meat">Choose Your Meat</label>
+      <input type="text" list="meat" id="meat-one" name="meat-one">
+      <datalist id="meat">
+        <option value="Pepperoni"></option>
+        <option value="Sausage"></option>
+        <option value="Salami"></option>
+        <option value="Beef"></option>
+        <option value="Meatballs"></option>
+        <option value="Chicken"></option>
+        <option value="Dog"></option>
+      </datalist>
+      <br>
+      <label for="xtrameat">Xtra Meat</label>
+      <input type="radio" value="xtrameat" id="xtrameat" name="xtrameat">
+      <label for="2xtrameat">2X Meat</label>
+      <input type="radio" value="2xtrameat" id="2xtrameat" name="xtrameat">
+      <label for="3xtrameat">Give Me All You Got</label>
+      <input type="radio" value="3xtrameat" id="3xtrameat" name="xtrameat">
+      <br>
+      <br>
+
+      <label for="moremeat">More Meat? No Problem</label>
+      <input type="text" list="moremeat" id="meat-two" name="meat-two">
+      <datalist id="moremeat">
+        <option value="Pepperoni"></option>
+        <option value="Sausage"></option>
+        <option value="Salami"></option>
+        <option value="Beef"></option>
+        <option value="Meatballs"></option>
+        <option value="Chicken"></option>
+        <option value="Horse"></option>
+      </datalist>
+      <br>
+      <label for="xtrameat">Xtra Meat</label>
+      <input type="radio" value="xtrameat" id="xtrameat" name="xtrameattwo">
+      <label for="2xtrameat">2X Meat</label>
+      <input type="radio" value="2xtrameat" id="2xtrameat" name="xtrameattwo">
+      <label for="3xtrameat">Give Me All You Got</label>
+      <input type="radio" value="3xtrameat" id="3xtrameat" name="xtrameattwo">
+    </div>
+    <div class="box">
+      <label for="veggies">I Guess We'll Give You Veggies</label> 
+      <br>
+      <br>
+      <textarea id="veggies" name="veggies" rows="5" cols="30" placeholder="Please type what veggies you'd like..."></textarea>
+    </div>
+    <div class="box">
+      <label for="done">Please Select Level of Doneness</label>
+      <br>
+      <input id="done" name="done" type="range" min="0" max="100" step="10">  
+    </div>
+  </div>
+  <div class="third-row">
+    <label for="final" id="third">Anything Else We Need To Know?</label> 
+      <br>
+      <br>
+      <textarea id="final" name="final" rows="5" cols="30" placeholder="Final chance to go for a cheese world record"></textarea>
+  </div>
+  <div class="submit-form">
+    <input type="submit" value="submit">
+  </div>
+</form>
+</section>
+
+<footer>
+  <div class="footer-wrapper">
+    <p class="footer-left">Copyright 2023, All rights reserved</p>
+    <p class="footer-right">Made in Tulsa, OK</p>
+  </div>
+</footer>
+
+<script src="https://kit.fontawesome.com/ffd14e2844.js" crossorigin="anonymous"></script>
+<script src="pizza.js"></script>
+    
+</body>
+</html>
